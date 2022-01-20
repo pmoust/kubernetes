@@ -119,7 +119,7 @@ func NewNodeController(
 		glog.Infof("Sending events to api server.")
 		eventBroadcaster.StartRecordingToSink(kubeClient.Events(""))
 	} else {
-		glog.Infof("No api server defined - no events will be sent to API server.")
+		glog.Infof("No API server defined - no events will be sent to API server.")
 	}
 	if allocateNodeCIDRs && clusterCIDR == nil {
 		glog.Fatal("NodeController: Must specify clusterCIDR if allocateNodeCIDRs == true.")

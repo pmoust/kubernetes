@@ -769,7 +769,7 @@ func (kl *Kubelet) Run(updates <-chan PodUpdate) {
 		kl.logServer = http.StripPrefix("/logs/", http.FileServer(http.Dir("/var/log/")))
 	}
 	if kl.kubeClient == nil {
-		glog.Warning("No api server defined - no node status update will be sent.")
+		glog.Warning("No API server defined - no node status update will be sent.")
 	}
 
 	// Move Kubelet to a container.

@@ -649,7 +649,7 @@ func (s *SchedulerServer) bootstrap(hks hyperkube.Interface, sc *schedcfg.Config
 	}
 
 	if len(s.APIServerList) < 1 {
-		log.Fatal("No api servers specified.")
+		log.Fatal("No API servers specified.")
 	}
 
 	client, err := s.createAPIServerClient()

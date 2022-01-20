@@ -700,7 +700,7 @@ func RunKubelet(kcfg *KubeletConfig) error {
 			eventBroadcaster.StartRecordingToSink(eventClient.Events(""))
 		}
 	} else {
-		glog.Warning("No api server defined - no events will be sent to API server.")
+		glog.Warning("No API server defined - no events will be sent to API server.")
 	}
 
 	privilegedSources := capabilities.PrivilegedSources{
